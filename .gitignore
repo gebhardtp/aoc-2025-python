@@ -1,0 +1,9 @@
+# Advent of Code specific
+inputs/
+*.txt
+input.txt
+
+# Python specific
+__pycache__/
+.venv/
+.env
