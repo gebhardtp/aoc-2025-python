@@ -51,7 +51,7 @@ def part_02(puzzle_input):
     return zeros
 
 def main():
-    puzzle_input = read_input("input.txt")
+    puzzle_input = read_input("day_01/input.txt")
     print(f"Part One:         {part_01(puzzle_input)}")
     print(f"Part Two (Loop):  {part_02_loop(puzzle_input)}")
     print(f"Part Two:         {part_02(puzzle_input)}")
