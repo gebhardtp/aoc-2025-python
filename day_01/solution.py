@@ -1,3 +1,5 @@
+# --- Day 1: Secret Entrance ---
+
 def read_input(filepath):
     with open(filepath, 'r') as f:
         return f.read().splitlines()

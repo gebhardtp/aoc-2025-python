@@ -1,4 +1,4 @@
-# My original solution
+# --- Day 2: Gift Shop ---
 
 import math
 

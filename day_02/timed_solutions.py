@@ -2,7 +2,7 @@
 # I was initially convinced that the pure mathematical approach (division, modulo, powers of 10) 
 # would be faster than converting numbers to strings for slicing and comparison.
 # Plot twist: The string operations turned out to be significantly faster! 
-# This was a huge learning moment—it shows just how optimized Python's built-in string handling really is. 
+# This was a huge learning moment: it shows just how optimized Python's built-in string handling really is. 
 # Sometimes the cleaner, more readable code is also the quicker code!
 
 import math

@@ -4,8 +4,11 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) in Python.
 
 ## Progress
 
-| Day | Name | Progress |
+| Day | Name | Stars |
 | --- | --- | --- |
 | 01 | Secret Entrance | ⭐⭐ |
 | 02 | Gift Shop | ⭐⭐ |
-| 03 | | |
+| 03 | Lobby | ⭐⭐ |
+| 04 | | |
+| 05 | | |
+| 06 | | |
