@@ -11,7 +11,7 @@ def part_01(rolls_of_paper):
         for collumn_index, roll in enumerate(roll_row):
             if roll == ".":
                 continue
-            
+
             number_of_adjacent_rolls = 0
             positions_to_check = [
                 (row_index - 1, collumn_index - 1), (row_index - 1, collumn_index), (row_index - 1, collumn_index + 1),
@@ -35,12 +35,50 @@ def part_01(rolls_of_paper):
     return number_of_accessible_rolls
 
 def part_02(rolls_of_paper):
-    pass
+    number_of_accessible_rolls = 0
+    
+    removed_rolls = True 
+    while removed_rolls:
+        removed_rolls = False
+        new_rolls_of_paper = rolls_of_paper
+
+        for row_index, roll_row in enumerate(rolls_of_paper):
+            for collumn_index, roll in enumerate(roll_row):
+                if roll != "@":
+                    continue
+
+                number_of_adjacent_rolls = 0
+                positions_to_check = [
+                    (row_index - 1, collumn_index - 1), (row_index - 1, collumn_index), (row_index - 1, collumn_index + 1),
+                    (row_index, collumn_index - 1), (row_index, collumn_index + 1),
+                    (row_index + 1, collumn_index - 1), (row_index + 1, collumn_index), (row_index + 1, collumn_index + 1)
+                ]
+
+                for position in positions_to_check:
+                    max_row_index = len(rolls_of_paper) - 1
+                    max_collumn_index = len(roll_row) - 1
+                    if position[0] < 0 or position[1] < 0 or position[0] > max_row_index or position[1] > max_collumn_index:
+                        continue
+                    if rolls_of_paper[position[0]][position[1]] == "@":
+                        number_of_adjacent_rolls += 1
+                    if number_of_adjacent_rolls >= 4:
+                        break
+
+                if number_of_adjacent_rolls < 4:
+                    old_roll_row = rolls_of_paper[row_index]
+                    new_roll_row = old_roll_row[:collumn_index] + "x" + old_roll_row[collumn_index + 1:]
+                    new_rolls_of_paper[row_index] = new_roll_row
+                    number_of_accessible_rolls += 1
+                    removed_rolls = True
+        
+        rolls_of_paper = new_rolls_of_paper 
+
+    return number_of_accessible_rolls
 
 def main():
     puzzle_input = read_input("day_04/input.txt")
-    print(f"Accessible rolls:  {part_01(puzzle_input)}")
-    # print(f"02: {part_02(puzzle_input)}")
+    print(f"Accessible rolls (without removing): {part_01(puzzle_input)}")
+    print(f"Accessible rolls (with removing):    {part_02(puzzle_input)}")
 
 if __name__ == "__main__":
     main()
