@@ -1,6 +1,4 @@
 # --- Day 7: Laboratories ---
-    
-import time
 
 def part_01(diagram):
     total_splits = 0
