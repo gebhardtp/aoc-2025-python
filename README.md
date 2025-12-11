@@ -13,4 +13,5 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) in Python.
 | 05 | Cafeteria | ⭐⭐ |
 | 06 | Trash Compactor | ⭐⭐ |
 | 07 | Laboratories | ⭐⭐ |
-| 08 | | |
+| 08 | Playground | ⭐ |
+| 09 | | |
