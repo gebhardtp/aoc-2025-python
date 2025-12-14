@@ -15,6 +15,6 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) in Python.
 | 07 | Laboratories | ⭐⭐ |
 | 08 | Playground | ⭐⭐ |
 | 09 | Movie Theater | ⭐⭐ |
-| 10 | Factory | |
+| 10 | Factory | ⭐ |
 | 11 | Reactor | |
 | 12 | Christmas Tree Farm | |
